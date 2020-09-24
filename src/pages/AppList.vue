@@ -86,7 +86,7 @@
             <div>
               <q-img
                       class="col"
-                      src="https://cdn.quasar.dev/img/parallax2.jpg"
+                      :src="app.obj.img"
                       style="height: 100px; max-width: 100px"
               />
               <div class="text-center" style="min-width: 100px;">ID {{ app.id }}</div>
@@ -178,7 +178,8 @@ export default {
             id: 1,
             title: 'ФОК "Искра"',
             description: 'Стадион на 1000 человек',
-            address: 'г. Владивосток, ул Ленина, д.2 '
+            address: 'г. Владивосток, ул Ленина, д.2',
+            img: './img/fok.jpg'
           },
           client: 'ООО Егоровна и колобки',
           contacts: [
@@ -205,7 +206,8 @@ export default {
             id: 1,
             title: 'ФОК',
             description: 'ФОК на 400 человек',
-            address: 'г. Москва, ул Тверская, д.2 '
+            address: 'г. Москва, ул Тверская, д.2 ',
+            img: './img/fok2.jpg'
           },
           client: 'ОАО Рога и копыта',
           contacts: [
