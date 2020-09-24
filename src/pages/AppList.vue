@@ -12,7 +12,7 @@
       </div>
       <div class="col-2">
         <q-btn round>
-          <q-icon name="face" style="font-size: 3rem;"/>
+          <q-icon name="account_circle" style="font-size: 3rem;"/>
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
