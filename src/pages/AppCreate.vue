@@ -44,19 +44,17 @@
           <!--<div class="col-auto text-h1" style="max-width: available;">-->
             <!--MAP WIDGET-->
           <!--</div>-->
-          <div style="">
-            <yandex-map
-                    :coords="coords"
-                    :zoom="10"
-                    @click="onMapClick"
-            >
-              <ymap-marker
-                      :coords="coords"
-                      marker-id="123"
-                      hint-content="some hint"
-              />
-            </yandex-map>
-          </div>
+          <yandex-map
+                  style="width: 600px; height: 600px;"
+                  :coords="[54.62896654088406, 39.731893822753904]"
+                  :cluster-options="{
+                  1: {clusterDisableClickZoom: true}
+               }"
+                  :controls="['trafficControl']"
+                  :placemarks="placemarks"
+                  map-type="hybrid"
+                  @map-was-initialized="initHandler"
+          ></yandex-map>
           <div class="col-auto text-h4" style="max-width: available;">
             Снеговая нагрузка: 2<br/>
             Ветровая нагрузка: 5<br/>
