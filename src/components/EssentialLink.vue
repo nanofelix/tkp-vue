@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  login: 'EssentialLink',
+  name: 'EssentialLink',
   props: {
     title: {
       type: String,

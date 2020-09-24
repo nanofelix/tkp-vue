@@ -5,6 +5,6 @@
 </template>
 <script>
 export default {
-  login: 'App'
+  name: 'App'
 }
 </script>
