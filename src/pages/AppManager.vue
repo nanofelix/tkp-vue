@@ -68,7 +68,7 @@
     </div>
     <div class="fit row wrap justify-start q-gutter-md">
       <q-card v-ripple class="my-card" v-for="obj in objects" :key="obj.id" @click="onCardClicked(obj.id)">
-        <img :src="obj.img">
+        <q-img :src="obj.img" spinner-color="white" />
 
         <q-card-section>
           <div class="text-h6">{{ obj.title }}</div>
@@ -116,35 +116,35 @@ export default {
           title: 'ФОК "Искра"',
           user: 'Иванов И.И.',
           description: 'Стадион на 1000 человек',
-          img: 'img/fok.jpg'
+          img: './img/fok.jpg'
         },
         {
           id: 2,
           title: 'Склад №1',
           user: 'Петров П.П.',
           description: 'Склад площадью 2000 кв. м',
-          img: 'img/wh.jpg'
+          img: './img/wh.jpg'
         },
         {
           id: 3,
           title: 'Дектский сад "Солнышко"',
           user: 'Смирнова А.А.',
           description: 'Районный детский сад',
-          img: 'img/kinder.jpg'
+          img: './img/kinder.jpg'
         },
         {
           id: 4,
           title: 'Объект 4',
           user: 'Иванов Иван',
           description: 'ФОК на 400 мест',
-          img: 'img/obj4.jpg'
+          img: './img/obj4.jpg'
         },
         {
           id: 5,
           title: 'Объект строительства 5',
           user: 'Васильев В.В.',
           description: 'Описание для объекта 4',
-          img: 'img/obj5.jpg'
+          img: './img/obj5.jpg'
         }
       ]
     }
