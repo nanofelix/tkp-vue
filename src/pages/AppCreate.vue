@@ -44,12 +44,11 @@
           <!--<div class="col-auto text-h1" style="max-width: available;">-->
             <!--MAP WIDGET-->
           <!--</div>-->
-          <div>
+          <div style="">
             <yandex-map
                     :coords="coords"
                     :zoom="10"
                     @click="onMapClick"
-                    :settings="settings"
             >
               <ymap-marker
                       :coords="coords"
@@ -248,12 +247,6 @@ export default {
       contactEmail: 'manager-ivan@fok-42.ru',
       dense: true,
       denseOpts: true,
-      settings: {
-        apiKey: '',
-        lang: 'ru_RU',
-        coordorder: 'latlong',
-        version: '2.1'
-      },
       coords: [
         54.82896654088406,
         39.831893822753904
