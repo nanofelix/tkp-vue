@@ -226,6 +226,34 @@ export default {
             datetime: '13.11.2020 в 11.00',
             user: 'Артём Артемов'
           }
+        },
+        {
+          id: 3,
+          status: 'ready',
+          obj: {
+            id: 1,
+            title: 'Склад',
+            description: 'Склад на 2000 кв метров',
+            address: 'г. Ростов, ул. Профсоюзная, 15 ',
+            img: './img/wh.jpg'
+          },
+          client: 'ЗАО Амазон',
+          contacts: [
+            {
+              id: 2,
+              name: 'Джефф Безос',
+              phone: '+79871234567',
+              email: 'jeff@gmail.com'
+            }
+          ],
+          created: {
+            datetime: '12.11.2019 в 11.00',
+            user: 'Олег Олегов'
+          },
+          modified: {
+            datetime: '13.11.2019 в 11.00',
+            user: 'Олег Олегов'
+          }
         }
       ]
     }
