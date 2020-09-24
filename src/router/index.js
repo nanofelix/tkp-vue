@@ -1,9 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import YmapPlugin from 'vue-yandex-maps'
+
 import routes from './routes'
 
+const settings = {
+  apiKey: '',
+  lang: 'ru_RU',
+  coordorder: 'latlong',
+  version: '2.1'
+}
+
 Vue.use(VueRouter)
+Vue.use(YmapPlugin, settings)
 
 /*
  * If not building with SSR mode, you can

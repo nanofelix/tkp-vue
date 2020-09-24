@@ -41,8 +41,22 @@
         </div>
 
         <div class="fit row wrap justify-around" style="height: 150px">
-          <div class="col-auto text-h1" style="max-width: available;">
-            MAP WIDGET
+          <!--<div class="col-auto text-h1" style="max-width: available;">-->
+            <!--MAP WIDGET-->
+          <!--</div>-->
+          <div>
+            <yandex-map
+                    :coords="coords"
+                    :zoom="10"
+                    @click="onMapClick"
+                    :settings="settings"
+            >
+              <ymap-marker
+                      :coords="coords"
+                      marker-id="123"
+                      hint-content="some hint"
+              />
+            </yandex-map>
           </div>
           <div class="col-auto text-h4" style="max-width: available;">
             Снеговая нагрузка: 2<br/>
@@ -205,8 +219,13 @@
 </template>
 
 <script>
+// import { yandexMap, ymapMarker } from 'vue-yandex-maps'
+import { yandexMap } from 'vue-yandex-maps'
+
 export default {
   name: 'PageAppCreate',
+  // components: { yandexMap, ymapMarker },
+  components: { yandexMap },
   data () {
     return {
       step: 1,
@@ -228,7 +247,17 @@ export default {
       contactJob: 'менеджер проекта',
       contactEmail: 'manager-ivan@fok-42.ru',
       dense: true,
-      denseOpts: true
+      denseOpts: true,
+      settings: {
+        apiKey: '',
+        lang: 'ru_RU',
+        coordorder: 'latlong',
+        version: '2.1'
+      },
+      coords: [
+        54.82896654088406,
+        39.831893822753904
+      ]
     }
   },
   methods: {
@@ -237,6 +266,9 @@ export default {
     },
     onGetPdf () {
       console.log('Сформировать пдф')
+    },
+    onMapClick (e) {
+      this.coords = e.get('coords')
     }
   }
 }
