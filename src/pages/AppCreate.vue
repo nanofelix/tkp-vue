@@ -33,11 +33,6 @@
               inactive-color="secondary"
               :done="step > 1"
       >
-        <!--<div class="fit row wrap content-start" style="height: 150px">-->
-          <!--<div class="col-auto text-h4" style="max-width: available;">-->
-            <!--Основные данные-->
-          <!--</div>-->
-        <!--</div>-->
 
         <div class="fit row wrap content-start" style="height: 150px">
           <div class="col-auto text-h6" style="max-width: available;">
