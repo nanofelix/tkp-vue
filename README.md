@@ -1,5 +1,3 @@
-# FerroKP
-
 ## Install the dependencies
 ```bash
 yarn
