@@ -76,12 +76,12 @@
     </div>
 
     <q-list bordered separator class="rounded-borders" style="width: 90%;">
-      <q-card class="my-card" v-for="x in 10" :key="x">
+      <q-card class="my-card" v-for="app in applications" :key="app.id">
         <q-card-section horizontal class="justify-start">
           <q-card-section horizontal class="justify-start">
             <q-card-actions vertical class="justify-around">
-              <q-btn flat round color="green" icon="circle" disabled/>
-              <q-btn flat round color="grey" icon="edit"/>
+              <q-btn flat round :color="app.status === 'ready' ? 'green' : 'orange'" icon="circle" disabled/>
+              <q-btn flat round color="grey" icon="edit" @click="onAppEditClicked(app.id)"/>
             </q-card-actions>
             <div>
               <q-img
@@ -89,37 +89,37 @@
                       src="https://cdn.quasar.dev/img/parallax2.jpg"
                       style="height: 100px; max-width: 100px"
               />
-              <div class="text-center" style="min-width: 100px;">ID 123456</div>
+              <div class="text-center" style="min-width: 100px;">ID {{ app.id }}</div>
             </div>
           </q-card-section>
           <q-card-section horizontal class="justify-start">
             <q-card-section vertial class="q-pa-md">
-              <div class="text-bold">ФОК, ФОК на 400 мест...</div>
+              <div class="text-bold">{{ app.obj.title }}, {{ app.obj.description }}</div>
               <div class="">
                 Клиент:<br/>
-                ООО Егоровна и колобки<br/>
-                г. Владивосток, ул Ленина, д.2
+                {{ app.client }}<br/>
+                {{ app.obj.address }}
               </div>
             </q-card-section>
             <q-card-section vertial class="q-pa-md">
               <div class="text-bold">Контактное лица:</div>
               <div class="">
-                Иванов Иван<br/>
-                +79871234567<br/>
-                ivan@gmail.com
+                {{ app.contacts[0].name}}<br/>
+                {{ app.contacts[0].phone}}<br/>
+                {{ app.contacts[0].email}}
               </div>
               <a href="google.com">ещё 2</a>
             </q-card-section>
             <q-card-section vertial class="q-pa-md">
               <div>Дата создания<br/>
-                12.12.2020 в 12.00<br/>
-                Сергей Сергеев
+                {{ app.created.datetime}}<br/>
+                {{ app.created.user }}
               </div>
             </q-card-section>
             <q-card-section vertial class="q-pa-md">
               <div>Дата изменения<br/>
-                13.12.2020 в 12.00<br/>
-                Пётр Петров
+                {{ app.modified.datetime }}<br/>
+                {{ app.modified.user}}
               </div>
             </q-card-section>
           </q-card-section>
@@ -142,6 +142,22 @@
         </q-card-actions>
       </q-card>
     </q-dialog>
+
+    <q-dialog v-model="dialogEditApp">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6">Разработка</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          Переход в Окно редактирования заявок
+        </q-card-section>
+
+        <q-card-actions align="center">
+          <q-btn flat label="OK" color="primary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -152,12 +168,72 @@ export default {
     return {
       acc1: true,
       acc2: false,
-      dialogDrafts: false
+      dialogDrafts: false,
+      dialogEditApp: false,
+      applications: [
+        {
+          id: 1,
+          status: 'ready',
+          obj: {
+            id: 1,
+            title: 'ФОК "Искра"',
+            description: 'Стадион на 1000 человек',
+            address: 'г. Владивосток, ул Ленина, д.2 '
+          },
+          client: 'ООО Егоровна и колобки',
+          contacts: [
+            {
+              id: 1,
+              name: 'Иванов Иван',
+              phone: '+79871234567',
+              email: 'ivan@gmail.com'
+            }
+          ],
+          created: {
+            datetime: '12.12.2020 в 12.00',
+            user: 'Сергей Сергеев'
+          },
+          modified: {
+            datetime: '13.12.2020 в 12.00',
+            user: 'Пётр Петров'
+          }
+        },
+        {
+          id: 2,
+          status: 'not',
+          obj: {
+            id: 1,
+            title: 'ФОК',
+            description: 'ФОК на 400 человек',
+            address: 'г. Москва, ул Тверская, д.2 '
+          },
+          client: 'ОАО Рога и копыта',
+          contacts: [
+            {
+              id: 2,
+              name: 'Петров Пётр',
+              phone: '+79871234567',
+              email: 'petr@gmail.com'
+            }
+          ],
+          created: {
+            datetime: '12.11.2020 в 11.00',
+            user: 'Василий Васильев'
+          },
+          modified: {
+            datetime: '13.11.2020 в 11.00',
+            user: 'Артём Артемов'
+          }
+        }
+      ]
     }
   },
   methods: {
     onDraftsClicked () {
       this.dialogDrafts = true
+    },
+    onAppEditClicked (appId) {
+      this.dialogEditApp = true
     }
   }
 }
