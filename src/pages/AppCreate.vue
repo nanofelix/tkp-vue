@@ -254,7 +254,7 @@ export default {
       clientType: 'Юр. лицо',
       legalForms: ['АО', 'ЗАО', 'ООО', 'ОАО'],
       legalForm: 'АО',
-      clientName: 'АО Рога и Копыта',
+      clientName: 'Техно-строй',
       personalTaxNum: '1234567890',
       ogrnNum: '0987654321',
       legalAddr: 'Москва, Сущёвский вал, 10',

@@ -178,7 +178,7 @@ export default {
             address: 'г. Владивосток, ул Ленина, д.2',
             img: './img/fok.jpg'
           },
-          client: 'ООО Егоровна и колобки',
+          client: 'ООО ФОК-Приморье',
           contacts: [
             {
               id: 1,
@@ -206,7 +206,7 @@ export default {
             address: 'г. Москва, ул Тверская, д.2 ',
             img: './img/fok2.jpg'
           },
-          client: 'ОАО Рога и копыта',
+          client: 'ОАО Спецстройкомплект',
           contacts: [
             {
               id: 2,
@@ -217,7 +217,7 @@ export default {
           ],
           created: {
             datetime: '12.11.2020 в 11.00',
-            user: 'Василий Васильев'
+            user: 'Сергей Сергеев'
           },
           modified: {
             datetime: '13.11.2020 в 11.00',
@@ -234,13 +234,13 @@ export default {
             address: 'г. Ростов, ул. Профсоюзная, 15 ',
             img: './img/wh.jpg'
           },
-          client: 'ЗАО Амазон',
+          client: 'ЗАО Товары для дома',
           contacts: [
             {
               id: 2,
-              name: 'Джефф Безос',
+              name: 'Флексеев Алексей',
               phone: '+79871234567',
-              email: 'jeff@gmail.com'
+              email: 'alex@gmail.com'
             }
           ],
           created: {

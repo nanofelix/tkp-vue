@@ -142,7 +142,7 @@ export default {
         {
           id: 5,
           title: 'Объект строительства 5',
-          user: 'Васильев В.В.',
+          user: 'Смирнов С.С.',
           description: 'Описание для объекта 4',
           img: './img/obj5.jpg'
         }
