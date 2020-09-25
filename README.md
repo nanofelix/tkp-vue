@@ -1,3 +1,9 @@
+## Install quasar cli if you haven't yet
+
+```bash
+yarn global add @quasar/cli
+```
+
 ## Install the dependencies
 ```bash
 yarn
