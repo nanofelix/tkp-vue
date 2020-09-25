@@ -10,7 +10,7 @@
       :width="200"
       :breakpoint="500"
       bordered
-      content-class="bg-grey-3"
+      content-class="text-blue"
     >
       <q-scroll-area class="fit">
         <q-list>
