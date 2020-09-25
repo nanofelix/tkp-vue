@@ -1,14 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf" class="bg-blue-grey-1 fa-align-center justify-center row q-pa-lg window-width">
-    <q-header elevated>
-      <q-toolbar>
-        <q-toolbar-title>
-          Ферро ТКП
-        </q-toolbar-title>
-
-      </q-toolbar>
-    </q-header>
-
     <q-drawer
       v-model="drawer"
       show-if-above
