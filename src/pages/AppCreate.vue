@@ -3,16 +3,16 @@
 
     <div class="row justify-between full-width row wrap justify-start items-start content-start"
          style="height: 60px; max-width: available;">
-      <q-breadcrumbs class="col-auto text-h6">
+      <q-breadcrumbs class="col-auto">
         <q-breadcrumbs-el label="Главная" to="/"/>
         <q-breadcrumbs-el label="Подготовка ТКП" to="/app_mgr"/>
         <q-breadcrumbs-el label="Список заявок ТКП" to="/app_mgr/list"/>
         <q-breadcrumbs-el label="Новая заявка"/>
       </q-breadcrumbs>
-      <div class="col-auto text-h5" style="max-width: available;"/>
+
       <div class="col-2">
         <q-btn round>
-          <q-icon name="account_circle" style="font-size: 3rem;"/>
+          <q-icon name="account_circle" style="font-size: 2rem;"/>
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
@@ -67,10 +67,7 @@
           </div>
         </div>
 
-        <div class="fit row wrap justify-around" style="height: 150px">
-          <!--<div class="col-auto text-h1" style="max-width: available;">-->
-            <!--MAP WIDGET-->
-          <!--</div>-->
+        <div class="fit row wrap justify-start" style="height: 150px">
           <yandex-map
                   style="width: 600px; height: 600px;"
                   :coords="[54.62896654088406, 39.731893822753904]"
@@ -82,7 +79,7 @@
                   map-type="hybrid"
                   @map-was-initialized="initHandler"
           ></yandex-map>
-          <div class="col-auto text-h4" style="max-width: available;">
+          <div class="col-auto text-h6 q-pa-md" style="max-width: available;">
             Снеговая нагрузка: 2<br/>
             Ветровая нагрузка: 5<br/>
             Сейсмика: 3
@@ -99,7 +96,7 @@
 
         <q-form @submit="onSubmit" class="q-gutter-md row justify-between">
           <div class="q-gutter-md col" style="max-width: 500px">
-            <div class="col-auto text-h4" style="max-width: available;">
+            <div class="col-auto text-h6" style="max-width: available;">
               Сведения о заказчике:
             </div>
             <q-select v-model="clientType" :options="clientTypes" label="Тип клиента" stack-label :dense="dense"
@@ -112,7 +109,7 @@
             <q-input v-model="legalAddr" label="Юридический адрес" stack-label/>
             <q-input v-model="actualAddr" label="Фактический адрес" stack-label/>
 
-            <div class="col-auto text-h4" style="max-width: available;">
+            <div class="col-auto text-h6" style="max-width: available;">
               Тип здания:
             </div>
             <q-select v-model="buildingPurpose" :options="buildingPurposes" label="Назначение" stack-label
@@ -132,7 +129,7 @@
           </div>
 
           <div class="q-gutter-md col" style="max-width: 500px">
-            <div class="col-auto text-h4" style="max-width: available;">
+            <div class="col-auto text-h6" style="max-width: available;">
               Контактное лицо:
             </div>
             <q-input v-model="contactName" label="ФИО" stack-label :dense="dense"/>

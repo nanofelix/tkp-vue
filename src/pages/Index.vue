@@ -1,12 +1,12 @@
 <template>
-  <q-page class="q-pa-md doc-container">
+  <q-page class="q-pa-md">
     <div class="row justify-between full-width wrap" style="height: 60px">
-      <q-breadcrumbs class="col-auto text-h6">
+      <q-breadcrumbs class="col-auto">
         <q-breadcrumbs-el label="Главная" />
       </q-breadcrumbs>
       <div class="col-2">
         <q-btn round>
-          <q-icon name="account_circle" style="font-size: 3rem;"/>
+          <q-icon name="account_circle" style="font-size: 2rem;"/>
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
@@ -37,6 +37,7 @@
         </q-btn>
       </div>
     </div>
+    <div class="row" style="min-height: 100px;"></div>
     <div class="fit row wrap justify-evenly content-start" style="height: 150px">
       <q-btn color="primary" label="Подготовка ТКП" class="btn-fixed-width" @click="onApplicationManagerClicked"/>
       <q-btn color="primary" label="Исполнение заказа" class="btn-fixed-width" @click="onOrderClicked"/>

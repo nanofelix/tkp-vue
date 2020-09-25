@@ -1,13 +1,13 @@
 <template>
   <q-page class="q-pa-md doc-container content-start">
     <div class="row justify-between full-width row wrap justify-start items-start content-start" style="height: 60px">
-      <q-breadcrumbs class="col-auto text-h6">
+      <q-breadcrumbs class="col-auto">
         <q-breadcrumbs-el label="Главная" to="/"/>
         <q-breadcrumbs-el label="Подготовка ТКП" />
       </q-breadcrumbs>
       <div class="col-2">
         <q-btn round>
-          <q-icon name="account_circle" style="font-size: 3rem;"/>
+          <q-icon name="account_circle" style="font-size: 2rem;"/>
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
@@ -38,7 +38,7 @@
         </q-btn>
       </div>
     </div>
-    <div class="fit row wrap text-h4" style="height: 150px">
+    <div class="fit row wrap text-h5" style="height: 150px">
       Объект строительства
     </div>
     <div class="fit row wrap q-pt-md q-gutter-md" style="height: 150px">

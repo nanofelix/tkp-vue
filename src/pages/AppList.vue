@@ -2,17 +2,14 @@
   <q-page class="q-pa-md doc-container">
     <div class="row justify-between full-width row wrap justify-start items-start content-start"
          style="height: 60px; max-width: available;">
-      <q-breadcrumbs class="col-auto text-h6">
+      <q-breadcrumbs class="col-auto">
         <q-breadcrumbs-el label="Главная" to="/"/>
         <q-breadcrumbs-el label="Подготовка ТКП" to="/app_mgr"/>
         <q-breadcrumbs-el label="Список заявок ТКП"/>
       </q-breadcrumbs>
-      <div class="col-auto text-h5" style="max-width: available;">
-        Вы <em style="background-color: bisque">не закончили заполнять</em> анкету -- она в черновиках!
-      </div>
       <div class="col-2">
         <q-btn round>
-          <q-icon name="account_circle" style="font-size: 3rem;"/>
+          <q-icon name="account_circle" style="font-size: 2rem;"/>
           <q-menu>
             <div class="row no-wrap q-pa-md">
               <div class="column">
@@ -43,7 +40,7 @@
         </q-btn>
       </div>
     </div>
-    <div class="fit row wrap text-h4" style="height: 150px">
+    <div class="fit row wrap text-h5" style="height: 150px">
       Заявки
     </div>
     <div class="fit row wrap q-pt-md q-gutter-md" style="height: 150px">
