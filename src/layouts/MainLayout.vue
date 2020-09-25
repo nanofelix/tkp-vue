@@ -34,7 +34,7 @@
       </div>
     </q-drawer>
 
-    <q-page-container class="fa-align-center justify-between window-width shadow-2 bg-white" style="max-width: 80%;">
+    <q-page-container class="fa-align-center justify-between window-width bg-white" style="max-width: 80%;">
       <router-view />
     </q-page-container>
   </q-layout>
