@@ -69,7 +69,7 @@
 
         <div class="fit row wrap justify-start" style="height: 150px">
           <yandex-map
-                  style="width: 600px; height: 600px;"
+                  style="width: 500px; height: 300px;"
                   :coords="[54.62896654088406, 39.731893822753904]"
                   :cluster-options="{
                   1: {clusterDisableClickZoom: true}
